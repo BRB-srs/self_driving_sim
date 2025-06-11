@@ -1,5 +1,4 @@
 #simulating a basic self-driving car decision for traffic signs
-#asking the user to input the colour of the traffic sign
 
 from traffic_sign import TrafficSign
 
