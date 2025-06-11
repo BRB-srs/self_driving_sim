@@ -1,11 +1,18 @@
 #simulating a basic self-driving car decision for traffic signs
 
-from traffic_sign import TrafficSign
+def get_direction(color):
+    color = color.lower()
+    if color == "red":
+        return "Pass on the RIGHT"
+    elif color == "green":
+        return "Pass on the LEFT"
+    else:
+        return "Invalid traffic sign color. Only red or green are allowed."
 
-colour = input("Enter the colour of the traffic sign (red or green): ").lower()
+# Ask user for input
+color_input = input("Enter the colour of the traffic sign (red or green): ")
 
-#using the TrafficSign class to decide
-sign = TrafficSign(colour)
-decision = sign.get_direction()
+# Get decision based on color
+decision = get_direction(color_input)
 
 print(decision)
